@@ -76,7 +76,7 @@ class DepartureView(View):
                    'subtitle': subtitle,
                    'description': description,
                    'departures': departures,
-                   'departure_rus': departures[departure],
+                   'departure_rus': departures[departure][:100] + '...',
                    'avail_tours_qty': c,
                    'min_price': min_price,
                    'max_price': max_price,
