@@ -14,7 +14,7 @@ class MainView(View):
                    'description': description,
                    'departures': departures,
                    'tours_data': list(map(lambda x: [tours[x]['title'],
-                                      tours[x]['description'][:50],
+                                      tours[x]['description'][:100] + '...',
                                       tours[x]['departure'],
                                       tours[x]['picture'],
                                       tours[x]['price'],
