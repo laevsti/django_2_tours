@@ -62,7 +62,7 @@ class DepartureView(View):
                 price_list.append(tours[i]['price'])
                 nights_list.append(tours[i]['nights'])
                 tours_data_list.append([tours[i]['title'],
-                                       tours[i]['description'],
+                                       tours[i]['description'][:150] + '...',
                                        tours[i]['picture'], i])
                 c += 1
         # min, max price:
@@ -76,7 +76,7 @@ class DepartureView(View):
                    'subtitle': subtitle,
                    'description': description,
                    'departures': departures,
-                   'departure_rus': departures[departure][:100] + '...',
+                   'departure_rus': departures[departure],
                    'avail_tours_qty': c,
                    'min_price': min_price,
                    'max_price': max_price,
